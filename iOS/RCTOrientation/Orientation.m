@@ -12,7 +12,7 @@
 @implementation Orientation
 @synthesize bridge = _bridge;
 
-static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllButUpsideDown;
+static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAll;
 + (void)setOrientation: (UIInterfaceOrientationMask)orientation {
   _orientation = orientation;
 }
@@ -218,7 +218,7 @@ RCT_EXPORT_METHOD(unlockAllOrientations)
   #if DEBUG
     NSLog(@"Unlock All Orientations");
   #endif
-  [Orientation setOrientation:UIInterfaceOrientationMaskAllButUpsideDown];
+  [Orientation setOrientation:UIInterfaceOrientationMaskAll];
 //  AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //  delegate.orientation = 3;
 }
